@@ -2,21 +2,28 @@
 
 ## Usage
 
-1. Clone the repository with `git clone git@github.com:BigWhaleLabs/versioned-contract`
-2. Install the dependencies with `yarn`
-3. Add environment variables to your `.env` file
-4. Run the scripts below
+##### Install package
 
-## Environment variables
+Using `yarn`
 
-| Name                         | Description                                               |
-| ---------------------------- | --------------------------------------------------------- |
-| `ETHERSCAN_API_KEY`          | Etherscan API key                                         |
-| `ETH_RPC`                    | Ethereum RPC URL                                          |
-| `CONTRACT_OWNER_PRIVATE_KEY` | Private key of the contract owner to deploy the contracts |
-| `COINMARKETCAP_API_KEY`      | Coinmarketcap API key                                     |
+```sh
+yarn add @big-whale-labs/versioned-contract
+```
 
-Also check out the `.env.sample` file for more information.
+##### Add to your contract
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.14;
+
+import "@big-whale-labs/versioned-contract/contracts/Versioned.sol"
+
+contract MyContract is Versioned {
+  constructor(string memory _version) Versioned(_version) {
+        // ...
+    }
+}
+```
 
 ## Available scripts
 
