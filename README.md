@@ -16,7 +16,7 @@ yarn add @big-whale-labs/versioned-contract
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-import "@big-whale-labs/versioned-contract/contracts/Versioned.sol"
+import "@big-whale-labs/versioned-contract/contracts/Versioned.sol";
 
 contract MyContract is Versioned {
   constructor(string memory _version) Versioned(_version) {
