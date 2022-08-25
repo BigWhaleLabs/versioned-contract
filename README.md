@@ -1,27 +1,18 @@
-# Contract for adding a version to contract
+# Contract that adds the version field
 
 ## Usage
 
-##### Install package
+1. Install the package `yarn add @big-whale-labs/versioned-contract`
+2. Add to your contract as follows:
 
-Using `yarn`
-
-```sh
-yarn add @big-whale-labs/versioned-contract
-```
-
-##### Add to your contract
-
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
 import "@big-whale-labs/versioned-contract/contracts/Versioned.sol";
 
 contract MyContract is Versioned {
-  constructor(string memory _version) Versioned(_version) {
-        // ...
-    }
+  constructor(string memory _version) Versioned(_version) {}
 }
 ```
 
